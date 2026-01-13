@@ -1,4 +1,4 @@
-if MOKULATE_RIGHT
+if MOKULATE_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Mokulate"
