@@ -24,22 +24,22 @@
 &xiao_serial { status = "disabled"; };
 
 // PAW3222 Trackball Configuration
-// Wiring: CS=P0.10, MOTION=P0.09, SDIO=P0.16, SCLK=P1.00
+// Wiring: CS=P0.10, MOTION=P0.09, SDIO=P1.00, SCLK=P0.16
 
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 0)>,    // SCLK = P1.00
-                    <NRF_PSEL(SPIM_MOSI, 0, 16)>,  // SDIO = P0.16
-                    <NRF_PSEL(SPIM_MISO, 0, 16)>;  // SDIO = P0.16 (same as MOSI)
+            psels = <NRF_PSEL(SPIM_SCK, 0, 16)>,   // SCLK = P0.16
+                    <NRF_PSEL(SPIM_MOSI, 1, 0)>,   // SDIO = P1.00
+                    <NRF_PSEL(SPIM_MISO, 1, 0)>;   // SDIO = P1.00 (same as MOSI)
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 0)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 16)>,
-                    <NRF_PSEL(SPIM_MISO, 0, 16)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 16)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 0)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 0)>;
             low-power-enable;
         };
     };
