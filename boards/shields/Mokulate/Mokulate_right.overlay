@@ -27,7 +27,7 @@
 // Wiring: CS=P0.10, MOTION=P0.09, SDIO=P1.00, SCLK=P0.16
 
 &pinctrl {
-    spi0_default: spi0_default {
+    spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 16)>,   // SCLK = P0.16
                     <NRF_PSEL(SPIM_MOSI, 1, 0)>,   // SDIO = P1.00
@@ -35,7 +35,7 @@
         };
     };
 
-    spi0_sleep: spi0_sleep {
+    spi3_sleep: spi3_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 16)>,
                     <NRF_PSEL(SPIM_MOSI, 1, 0)>,
@@ -45,11 +45,11 @@
     };
 };
 
-&spi0 {
+&spi3 {
     status = "okay";
     compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;  // CS = P0.10
 
