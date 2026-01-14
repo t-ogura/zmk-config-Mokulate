@@ -88,7 +88,7 @@
 &kp TAB       &kp N7  &kp N8  &kp N9  &kp MINUS     &none    &none   &kp LBKT      &trans    &mkp MB3  &trans     &trans
 &kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp LS(PLUS)  &none    &none   &kp LS(N0)    &mkp MB1  &kp UP    &mkp MB2   &kp LS(PLUS)
 &kp FSLH      &kp N1  &kp N2  &kp N3  &kp CARET     &none    &none   &kp LS(LBRC)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp FSLH
-&kp ESCAPE    &trans  &trans  &trans  &trans        &DEL     &trans  &trans        &none     &none     &none      &trans
+&kp ESCAPE    &trans  &trans  &trans  &trans        &kp DEL  &trans  &trans        &none     &none     &none      &trans
             >;
         };
 
