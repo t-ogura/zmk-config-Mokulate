@@ -29,22 +29,19 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
-
-
 / {
-
     combos {
         compatible = "zmk,combos";
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <14 13>;
             layers = <0>;
         };
 
         stab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <15 14>;
         };
 
         btreset {
@@ -61,10 +58,10 @@
 
         dq {
             bindings = <&kp DQT>;
-            key-positions = <18 17>;
+            key-positions = <16 19>;
         };
-
     };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -79,19 +76,19 @@
 
         SYMBOL {
             bindings = <
-&kp F1     &kp F2         &kp F3    &kp F4        &kp F5    &none     &none   &kp F6         &kp F7    &kp F8    &kp F9        &kp F10
+&kp F1         &kp F2           &kp F3      &kp F4         &kp F5           &none     &none   &kp F6             &kp F7    &kp F8    &kp F9        &kp F10
 &kp JP_COLON   &kp EXCLAMATION  &kp SLASH   &kp JP_LPAREN  &kp JP_LBRACKET  &none     &none   &kp JP_UNDERSCORE  &kp UP    &kp UP    &kp LS(RPAR)  &kp SEMI
-&kp SEMICOLON  &kp QUESTION     &kp JP_YEN  &kp JP_RPAREN  &kp JP_RBRACKET  &none     &none   &kp JP_AT         &kp LEFT  &kp DOWN  &kp RIGHT     &kp BSLH
-&none      &trans         &trans    &trans        &trans    &trans    &trans  &trans         &none     &none     &none         &trans
+&kp SEMICOLON  &kp QUESTION     &kp JP_YEN  &kp JP_RPAREN  &kp JP_RBRACKET  &none     &none   &kp JP_AT          &kp LEFT  &kp DOWN  &kp RIGHT     &kp BSLH
+&none          &trans           &trans      &trans         &trans           &trans    &trans  &trans             &none     &none     &none         &trans
             >;
         };
 
         NUMBER {
             bindings = <
-&kp TAB       &kp N7  &kp N8  &kp N9  &kp MINUS     &none     &none   &kp LBKT      &trans    &mkp MB3  &trans     &trans
-&kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp LS(PLUS)  &none     &none   &kp LS(N0)    &mkp MB1  &kp UP    &mkp MB2   &kp LS(PLUS)
-&kp FSLH      &kp N1  &kp N2  &kp N3  &kp CARET     &none     &none   &kp LS(LBRC)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp FSLH
-&kp ESCAPE    &trans  &trans  &trans  &trans        &DEL      &trans  &trans        &none     &none     &none      &trans
+&kp TAB       &kp N7  &kp N8  &kp N9  &kp MINUS     &none    &none   &kp LBKT      &trans    &mkp MB3  &trans     &trans
+&kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp LS(PLUS)  &none    &none   &kp LS(N0)    &mkp MB1  &kp UP    &mkp MB2   &kp LS(PLUS)
+&kp FSLH      &kp N1  &kp N2  &kp N3  &kp CARET     &none    &none   &kp LS(LBRC)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp FSLH
+&kp ESCAPE    &trans  &trans  &trans  &trans        &DEL     &trans  &trans        &none     &none     &none      &trans
             >;
         };
 
